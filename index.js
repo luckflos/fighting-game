@@ -69,6 +69,10 @@ const player = new Fighter({
         takeHit: {
             imageSrc: './img/kenji/Take Hit - white silhouette.png',
             framesMax: 4,
+        },
+        death: {
+            imageSrc: './img/kenji/Death.png',
+            frameMax: 6
         }
     },
     attackBox: {
@@ -127,6 +131,10 @@ const enemy = new Fighter({
         takeHit: {
             imageSrc: './img/samuraiMack/Take hit.png',
             frameMax: 3
+        },
+        death: {
+            imageSrc: './img/samuraiMack/Death.png.png',
+            frameMax: 7
         }
     },
     attackBox: {
@@ -164,6 +172,8 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
     shop.update()
+    c.fillStyle = 'rgba(255, 255, 255, 0.15)'
+    c.fillRect(0, 0, canvas.width, canvas.height)
     player.update()
     enemy.update()
 
